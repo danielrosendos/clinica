@@ -1,0 +1,89 @@
+<div
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  class="conatiner-login-register"
+>
+  <form
+    role="form"
+    [formGroup]="formRegister"
+    (ngSubmit)="enviarFormulario()"
+    class="form"
+  >
+    <div class="logo-container">
+      <app-identidade> </app-identidade>
+    </div>
+    <h3>Crie uma conta</h3>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Nome de usuário</mat-label>
+        <input
+          matInput
+          placeholder="Nome de usuário"
+          formControlName="username"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Email"
+          formControlName="email"
+          type="email"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input
+          matInput
+          placeholder="Nome de usuário"
+          formControlName="password"
+          [type]="hidePass ? 'text' : 'password'"
+        />
+        <mat-icon matSuffix (click)="hidePass = !hidePass">
+          {{ hidePass ? "visibility" : "visibility_off" }}
+        </mat-icon>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Confirmar senha</mat-label>
+        <input
+          matInput
+          placeholder="Nome de usuário"
+          formControlName="confirmPassword"
+          [type]="hideConfirmPass ? 'text' : 'password'"
+        />
+        <mat-icon matSuffix (click)="hideConfirmPass = !hideConfirmPass">
+          {{ hideConfirmPass ? "visibility" : "visibility_off" }}
+        </mat-icon>
+      </mat-form-field>
+    </div>
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>
+        <button
+          mat-button
+          color="primary"
+          class="btn-custom"
+          (click)="irParaTelaDeLogin()"
+        >
+          Cancelar
+        </button>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <button
+          mat-raised-button
+          color="primary"
+          class="btn-custom"
+          type="submit"
+        >
+          Registrar
+        </button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</div>

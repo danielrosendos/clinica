@@ -1,0 +1,14 @@
+<div class="grid-fixed lx-large">
+  <mat-toolbar class="toolbar">
+    <mat-toolbar-row>
+      <div routerLink="/consultas" class="logo">
+        <app-identidade> </app-identidade>
+      </div>
+      <span class="spacer"></span>
+      <app-user-profile></app-user-profile>
+      <button mat-button color="primary" (click)="logOut()">
+        Desconectar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

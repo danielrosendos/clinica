@@ -1,0 +1,29 @@
+.first-letter {
+    height: 3em;
+    line-height: 3em;
+    width: 3em;
+    border-radius: 100px;
+    background-color: white;
+    color: teal
+}
+
+.profile {
+    margin-bottom: 1vh;
+    padding: 10px;
+}
+
+.email {
+    color: white;
+}
+
+.office {
+    color: #ffffffb3;
+}
+
+.text-data {
+    margin: 1em 0 1em 0;
+}
+
+.user {
+    font-weight: bold;
+}

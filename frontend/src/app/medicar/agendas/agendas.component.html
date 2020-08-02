@@ -1,0 +1,17 @@
+ <mat-form-field>
+  <mat-label>Data</mat-label>
+  <mat-select [(ngModel)]="agendaSelected" (ngModelChange)="selectDay($event)" [disabled]="selectDayDisable">
+    <mat-option *ngFor="let item of agendasOptions" [value]="item">
+      {{item.dia.split('-').reverse().join('-')}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Hora</mat-label>
+  <mat-select [(ngModel)]="hourSelected" (ngModelChange)="selectHour($event)" [disabled]="selectHourDisable">
+    <mat-option *ngFor="let item of hoursListOptions" [value]="item">
+      {{item}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

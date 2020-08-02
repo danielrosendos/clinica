@@ -1,0 +1,21 @@
+.drawer-container {
+    height: 100vh;
+    color: teal;
+    background-color: #ffffff;
+}
+
+.drawer-sidenav-content {
+    max-width: 1080px;
+    margin: 20px auto 0;
+    height: 100%;
+    justify-content: center;
+}
+
+.drawer-sidenav {
+    padding: 20px;
+    background-color: teal;
+}
+
+.toggle-drawer {
+    color: teal;
+}

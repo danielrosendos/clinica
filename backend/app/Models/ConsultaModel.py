@@ -1,8 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.dispatch import receiver
+from django.db.models.signals import post_delete, post_save
 
 from .BaseModel import Base
 from .AgendaModel import Agenda
+from .HorarioModel import Horario
 
 
 class Consulta(Base):
@@ -23,3 +26,22 @@ class Consulta(Base):
 
     def __str__(self):
         return self.datado_do_agendamento.strftime("%H:%M")
+
+@receiver(post_save, sender=Consulta)
+def marcar_horario_como_indisponivel(sender, instance, created, **kwargs):
+    if created:
+        (
+            Horario
+            .objects
+            .filter(agenda__dia=instance.dia, horario=instance.horario)
+            .update(disponivel=False)
+        )
+
+@receiver(post_delete, sender=Consulta)
+def marcar_horario_como_disponivel(sender, instance, **kwargs):
+    (
+        Horario
+        .objects
+        .filter(agenda__dia=instance.dia, horario=instance.horario)
+        .update(disponivel=True)
+    )

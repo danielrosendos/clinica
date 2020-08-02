@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Especialidade</mat-label>
+  <mat-select [(ngModel)]="selected" (ngModelChange)="selectEspecialidade($event)">
+    <mat-option *ngFor="let item of especialidades | async" [value]="item.id">
+      {{item.nome}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

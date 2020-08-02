@@ -1,0 +1,75 @@
+.conatiner-login-register {
+  color: #a8a8a8;
+  margin-top: calc(10% - 80px);
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.btn-custom {
+  width: 100%;
+  margin: 20px !important;
+}
+
+.mat-form-field {
+  width: 100% !important;
+  margin-bottom: 3%;
+}
+
+.formFieldWidth480 .mat-form-field-infix {
+  border: 1px solid grey !important;
+}
+
+.logo-container {
+  margin-bottom: 10px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.form {
+  width: 350px;
+}
+
+.grid-fixed {
+  margin: 20px auto 0;
+}
+
+.toolbar {
+  background-color: white;
+}
+
+table {
+  width: 100%;
+}
+
+.lx-large {
+  max-width: 1080px;
+}
+
+.lx-small {
+  max-width: 400px;
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+  color: white !important;
+}
+
+.mat-toolbar {
+  background-color: white !important;
+}
+
+.msg-success {
+  background-color: #28a745 !important;
+  color: #fff !important;
+}
+
+.msg-error {
+  background-color: #e35e6b !important;
+  color: #fff !important;
+}
